@@ -1,5 +1,6 @@
 [phases.setup]
 nixPkgs = [
+  "python3",
   "chromium",
   "nss",
   "nspr",
@@ -29,8 +30,8 @@ nixPkgs = [
 
 [phases.install]
 cmds = [
-  "pip install -r requirements.txt",
-  "playwright install chromium",
+  "/opt/venv/bin/pip install -r requirements.txt",
+  "/opt/venv/bin/playwright install chromium",
 ]
 
 [start]
